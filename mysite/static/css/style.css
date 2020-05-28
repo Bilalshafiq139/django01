@@ -1,0 +1,43 @@
+.setting {
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-right: 20%;
+    border-bottom-style: groove;
+    border-bottom-color: black;
+    border-top-style: groove;
+    border-top-color: black;
+    border-left-style: groove;
+    border-left-color: black;
+    border-right-style: groove;
+    border-right-color: black;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.top-centre{
+    margin-left:150px;
+    background-color:maroon;
+    color:white;
+    padding-top:10px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:10px;
+    margin-right:150px;
+}
+.right{
+    margin-left:60%;
+    margin-top:20px;
+
+}
+.district{
+    margin-left:170px;
+
+}
+.dist{
+    margin-left:168px;
+}
+.top-centre-below{
+    margin-left:90px;
+    margin-bottom:30px;
+}

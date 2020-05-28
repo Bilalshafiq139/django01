@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\HMC\OneDrive\Desktop\final year\editstylesheet.css" />
+    {% load  staticfiles %}
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+    <div class="container set">
+
+        <form class="setting">
+            <h3 class="top-centre"><strong>Applicant Information</strong> </h3>
+            <h5 class="top-centre-below">please update the field that you want to be change</h5>
+
+
+            <p><i class="fas fa-image"></i><label for="file" style="cursor: pointer;"><strong>Upload Image</strong></label></p>
+            <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"><img src="../media/{{applicant.Image_URL}}" width="200" id="output"/> </p>
+            <p><img id="output" width="200" /></p>
+
+
+
+            <div class="form-row ">
+                <div class="col-md-6 mb-3">
+                    <label><strong>Form NO</strong></label>
+                    <input type="text" class="form-control" id="formno" placeholder="Form No" required />
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label><strong>Status</strong></label>
+
+                    <select class="form-control">
+                        <option disabled selected>Status</option>
+                        <option value="1"> Pending </option>
+                        <option value="2"> Approved </option>
+                        <option value="3"> Rejected </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label><strong>Applicant Name</strong></label>
+                    <input type="text" class="form-control" id="applicantname" placeholder="Applicant Name" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label><strong>Father Name</strong></label>
+                    <input type="text" class="form-control" id="fathernae" placeholder="Father Name" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label><strong>Email Adress</strong></label>
+                    <input type="text" class="form-control" id="applicantname" placeholder="Email Address" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label><strong>CNIC/BFORM</strong></label>
+                    <input type="text" class="form-control" id="applicantname" placeholder="CNIC/BFORM" required />
+                </div>
+
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label><strong>Address</strong></label>
+                    <input type="text" class="form-control" id="applicantname" placeholder="Address" required />
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="form-group ml-2" name="Gender">
+                    <label class="mt-1"><strong>Hafiz Quran</strong></label>
+                   <div class="colorwhite">
+
+                       <label style="font-weight:normal"><input type="radio" name="type" />Yes</label>&nbsp;&nbsp;
+                       <label style="font-weight:normal"><input type="radio" name="type" checked="checked" />No</label>&nbsp;&nbsp;
+
+                   </div>
+                </div>
+                <div class="col-md-6 mb-3 ml-5">
+
+                    <label class=" district"><strong>District</strong></label>
+
+                        <select class="form-control dist">
+
+                            <option disabled selected District>District</option>
+                            <option value="2">Lahore </option>
+                            <option value="3"> Islamabad </option>
+                            <option value="4"> Sahiwal </option>
+                            <option value="5"> Other </option>
+
+                        </select>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+
+                    <label><strong>Religion</strong></label>
+
+                    <select class="form-control">
+                        <option disabled selected>Religion</option>
+                        <option value="2">Islam </option>
+                        <option value="3"> Christianity </option>
+                        <option value="4"> Others </option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label><strong>Country</strong></label>
+
+                    <select class="form-control">
+                        <option disabled selected>Country</option>
+                        <option value="2">Pakistan </option>
+                        <option value="3">Turkey</option>
+                        <option value="4">Thailand </option>
+                         <option value="5">Other </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+
+                    <label><strong>Program</strong></label>
+
+                    <select class="form-control">
+                        <option disabled selected>Program</option>
+                        <option value="2">BBIT </option>
+                        <option value="3">MBIT </option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label><strong>DOB</strong></label>
+                    <input type="date" class="form-control" id="fathernae" placeholder="DOB" required />
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="col-md-6 mb-3">
+
+                    <label><strong>Gender</strong></label>
+
+                    <select class="form-control">
+                        <option disabled selected>Gender</option>
+                        <option value="2">Male  </option>
+                        <option value="3"> Female </option>
+                        <option value="4"> Others </option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+
+                    <label><strong>Martial Status</strong></label>
+
+                    <select class="form-control">
+                        <option disabled selected>Martial Status</option>
+                        <option value="2">Married</option>
+                        <option value="3">single</option>
+                        <option value="4">Other</option>
+
+                    </select>
+                </div>
+                </div>
+            <div class="form-row">
+
+                <div class="form-group right">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                    <button type="reset" class="btn btn-info"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </div>
+
+        </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/v4-shims.min.js" integrity="sha256-prFmieX9aRVhOV/ldXGklUUhS7NRBQUijQU4HcdnO8Q=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/solid.min.js" integrity="sha256-UM1HRu0Wd16k4L5wgrk17BYWzKkjZSe0BYr5T5qw2Ww=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/regular.min.js" integrity="sha256-H0NvRuA8S2idTs4I6NzvHRkonlIQNO9wGutAM0//9YU=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js" integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js" integrity="sha256-z0T3r+4uTjAkB5CHxybF9RQwAzHEdFB5+hJe/pGAcPg=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/conflict-detection.min.js" integrity="sha256-vWyx9G/vjBdyP+7cJX+ixOo8lSK4ql3LCCCkGY8GM6M=" crossorigin="anonymous"></script>
+                <script>
+                    var loadFile = function (event) {
+                        var image = document.getElementById('output');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                </script>
+</body>
+</html>
